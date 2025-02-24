@@ -1,0 +1,102 @@
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loginha Blox</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Loginha Blox</h1>
+    <img src="b8b31f84-f60e-4bdf-8b3d-07821c5255f2.png" alt="Loginha Blox Logo" style="max-width: 200px;">
+    <nav>
+      <ul>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Carrinho (<span id="cart-count">0</span>)</a></li>
+        <li><a href="#" id="login-link">Login</a></li>
+        <li><a href="#" id="signup-link">Criar Conta</a></li>
+          <li id="welcome-message" style="display: none; color: yellow;"></li>
+        <li id="admin-link" style="display: none;"><a href="#" onclick="scrollToAdminPanel()">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="featured-products">
+      <h2>Produtos em Destaque</h2>
+      <div class="product-grid">
+      </div>
+    </section>
+
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+          <label for="login-name">Nome:</label>
+          <input type="text" id="login-name" name="login-name" required>
+          <label for="login-password">Senha:</label>
+          <input type="password" id="login-password" name="login-password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Criar Conta</h2>
+        <form id="signup-form">
+          <label for="signup-name">Nome:</label>
+          <input type="text" id="signup-name" name="signup-name" required>
+          <label for="signup-password">Senha:</label>
+          <input type="password" id="signup-password" name="signup-password" required>
+          <button type="submit">Criar Conta</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="admin-panel" style="display: none;">
+      <h2>Painel de Administração</h2>
+      <form id="add-product-form">
+        <label for="product-name">Nome do Produto:</label>
+        <input type="text" id="product-name" name="product-name" required>
+
+        <label for="product-price">Preço:</label>
+        <input type="number" id="product-price" name="product-price" required>
+
+        <label for="product-stock">Estoque:</label>
+        <input type="number" id="product-stock" name="product-stock" required>
+
+        <label for="product-image">URL da Imagem:</label>
+        <input type="text" id="product-image" name="product-image" required>
+
+        <button type="submit">Adicionar Produto</button>
+      </form>
+
+      <h3>Lista de Produtos</h3>
+      <table id="product-table">
+        <thead>
+          <tr>
+            <th>Imagem</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Loginha Blox. Todos os direitos reservados.</p>
+  </footer>
+
+
+</body></html>

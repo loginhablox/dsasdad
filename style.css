@@ -287,13 +287,13 @@ form button:hover {
 .product-details {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza os itens horizontalmente */
+  align-items: center;
 }
 
 .product-details .price {
-  order: 1; /* Garante que o preço apareça primeiro */
+  order: 1;
 }
 
 .product-details .stock {
-  order: 2; /* Garante que o estoque apareça em segundo */
+  order: 2;
 }
